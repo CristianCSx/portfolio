@@ -1,17 +1,39 @@
 ---
 import Badge from "./Badge.astro";
+import Experience from "./Experience.astro";
+import SectionContainer from "./SectionContainer.astro";
 ---
 
-<main>
-    <section class="w-full mx-auto lg:w-[740px] py-44">
-        <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-            Hey, soy Cristian
-            <div class="flex justify-center items-center">
-                <Badge>Prueba de badge</Badge>
-            </div>
-        </h1>
-        <h2 class="text-xl opacity-80">
-            Programador Full Stack con experiencia en desarrollo web e Inteligencia Artificial.
-        </h2>
-    </section>
+<main class="sm:mx-5">
+	<SectionContainer class="pt-44 pb-24">
+		<div class="pb-8">
+			<div class="flex flex-row gap-x-4 items-center">
+				<img
+					class="rounded-full w-30 h-30"
+					src="/my-photo.jpg"
+					alt="cristian"
+				/>
+				<h1 class="text-white text-5xl font-bold flex flex-row gap-x-3 pb-4">
+					Hola, soy
+					<span class="bg-linear-to-r from-[#B81CE8] to-[#57C1CF] bg-clip-text text-transparent">
+						Cristian
+					</span>
+				</h1>
+			</div>
+		</div>
+		
+		<h2 class="text-2xl opacity-80 text-wrap">
+			Programador Full Stack con experiencia en Desarrollo de aplicaciones Web e Inteligencia Artificial. De Salamanca, España. 
+		</h2>
+
+		<div class="flex justify-between w-min gap-x-4 py-4">
+			<Badge url="https://www.linkedin.com/in/cristian-castillo-salguero/" bg_color="#162556" text_color="#fff" border_color="#1c398e">Linkedin</Badge>
+			<Badge url="https://github.com/CristianCSx" bg_color="#1e2939" text_color="#fff" border_color="#364153">Github</Badge>
+			<Badge url="https://x.com/cristiancsdev" bg_color="#101828" text_color="#fff" border_color="#1e2939">X / Twitter</Badge>
+		</div>
+	</SectionContainer>
+	<SectionContainer id="experience">
+		<h2 class="text-2xl font-semibold mb-6">Experiencia laboral</h2>
+		<Experience />
+	</SectionContainer>
 </main>
