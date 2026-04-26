@@ -1,0 +1,33 @@
+---
+interface Props {
+	title: string,
+	location: string,
+	location_url: string,
+	description: string
+}
+
+const { title, location, location_url, description } = Astro.props;
+---
+
+<div class="absolute w-3 h-3 bg-neutral-quaternary rounded-full mt-1.5 -inset-s-1.5 border border-buffer"></div>
+<h3 class="text-lg font-semibold mt-2 mb-1">{title}</h3>
+<div class="text-md font-normal leading-none text-white/70">
+	<a href={location_url} target="_blank" rel="noopener noreferrer" class="inline-flex items-center font-normal hover:underline">{location}
+		<svg 
+			class="mb-1 ml-2 size-5 ms-1 rtl:rotate-180" 
+			aria-hidden="true" 
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none" 
+			viewBox="0 0 24 24"
+		>
+			<path 
+				stroke="currentColor" 
+				stroke-width="2" 
+				stroke-linecap="round" 
+				stroke-linejoin="round" 
+				d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" 
+			/>
+		</svg>
+	</a>
+</div>
+<p class="mt-4 mb-4 text-white/85 font-extralight text-pretty">{description}</p>

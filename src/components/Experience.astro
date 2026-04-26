@@ -1,0 +1,42 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+	{
+		title: 'Grado en Ingenería Informática',
+		location: 'Universidad de Salamanca (USAL)',
+		location_url: 'https://usal.es/',
+		description: 'Estudiante del Grado en Ingenería Informática en la Universidad de Salamanca (USAL) donde adquirí gran base de conocimientos en sistemas informáticos, análisis de algoritmos y desarrollo web entre muchos otros más.'
+	},
+	{
+		title: 'Estudiante de prácticas',
+		location: 'Grupo de Investigación GRIAL',
+		location_url: 'https://grial.usal.es/',
+		description: 'Estudiante de Prácticas en el Grupo de Investigación GRIAL de la Universidad de Salamanca. En esta etapa adquirí conocimientos sobre Modelos Extensos de Lenguaje (LLMs) y amplié conocimientos en desarrollo de Aplicaciones Web.'
+	},
+	{
+		title: 'Máster en Ingeniería de Software y Sistemas Informáticos',
+		location: 'Universidad internacional de La Rioja (UNIR)',
+		location_url: 'https://www.unir.net/',
+		description: 'Estudiante del Máster en Ingenería de Software en la Universidad Universidad internacional de La Rioja (UNIR) donde amplié mis conocimientos en desarrollo de aplicaciones web, ciberseguridad, ingeniería de software y gestión de proyectos entre otrás más.'
+	},
+	{
+	   title: 'Ingeniero de Software Full-Stack',
+	   location: 'Future International Trading S.L',
+	   location_url: 'https://future-trading.es/',
+	   description: 'Ingeniero de Software Junior encargado en el desarrollo de software orientado al Crowdfounding (Financecrowd) de empresas clientes y soporte de lógistica.' 
+	}
+]
+---
+
+<div class="w-full max-w-3xl mx-auto px-4">
+	<ol class="relative border-s border-default">                
+		{
+			EXPERIENCE.map(experience => (
+				<li class="mb-10 ms-4">
+					<ExperienceItem {...experience} />
+				</li>
+			))
+		}
+	</ol>
+</div>
