@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Layout from "@/layouts/Layout.astro";
+import TechnologiesContainer from "@/components/TechnologiesContainer.astro";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+
+---
+
+<Layout title="Projects">
+
+	<main class="sm:mx-5">
+			<SectionContainer class="mt-44 mb-24 max-w-4xl px-5 sm:px-10 md:px-20 lg:px-4">
+				{
+					projects.map(project => {
+						const { id, data } = project;
+						const { title, technologies, img, description, link } = data;
+
+						return (
+							<div class="flex flex-col lg:flex-row lg:mb-10 mt-20 sm:mt-10 md:mt-5">
+								<div class="flex items-start lg:w-[450px] lg:min-w-[450px]">
+									<div class="relative overflow-hidden rounded-xl w-full">
+										<a href={id}>
+											<Image 
+												src="https://dummyimage.com/450x250/616161/ffffff.jpg" 
+												alt="" 
+												width={450} 
+												height={250} 
+												loading="eager"
+												class="w-full object-cover transition-transform duration-500 hover:scale-110"
+											/>
+										</a>
+									</div>
+								</div>
+
+								<div class="flex flex-col flex-1 mt-5 mb-5 lg:mt-0 lg:ml-10 md:mb-5">
+									<div class="flex flex-col gap-y-2 font-extralight opacity-85">
+										<h1 class="text-2xl font-bold">{title}</h1>
+
+										<p>
+											<TechnologiesContainer technologies={technologies} />
+										</p>
+
+										<p class="text-justify">{description}</p>
+									</div>
+								</div>
+							</div>
+						);
+					})
+				}
+			</SectionContainer>
+	</main>
+</Layout>
