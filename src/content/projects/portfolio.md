@@ -1,7 +1,7 @@
 ---
 title: Portfolio
 technologies: ["Astro", "Tailwind CSS"]
-img: portfolio.jpg
+image: portfolio.png
 description: Portfolio desarrollado con Astro y Tailwind CSS con el fin de aprender dichas tencologías.
 link: https://practica-individual.vercel.app/
 ---

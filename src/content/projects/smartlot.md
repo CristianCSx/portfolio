@@ -1,8 +1,8 @@
 ---
 title: Smartlot
-technologies: ["React", "Spring Boot", "OpenStreetMap"]
-img: smartlot.jpg
-description: Proyecto de fin de máster cuyo objetivo principal es el de proporcionar un software *Open Source* que permita aliviar y solventar los problemas que surgen en una cuidad a la hora de buscar un aparcamiento.
+technologies: ["React", "Spring Boot", "MongoDB", "OpenStreetMap"]
+image: smartlot.png
+description: Proyecto de fin de máster cuyo objetivo principal es el de proporcionar un software Open Source que permita aliviar y solventar los problemas que surgen en una cuidad a la hora de buscar un aparcamiento.
 link: https://practica-individual.vercel.app/
 ---
 
