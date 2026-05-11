@@ -2,16 +2,17 @@
 import Technology from "./Technology.astro";
 
 interface Props {
-  technologies: string[];
+	technologies: string[];
+	className: string;
 }
 
-const { technologies } = Astro.props;
+const { technologies, className } = Astro.props;
 ---
 
-<div class="flex flex-nowrap gap-3">
-  {
-	technologies.map(technology => (
-		<Technology technology={technology} />
-	))
-  }
+<div class=`flex flex-wrap gap-3 ${className}`>
+	{
+		technologies.map(technology => (
+			<Technology technology={technology} />
+		))
+	}
 </div>

@@ -1,17 +1,20 @@
 ---
 import { Image } from "astro:assets";
-import Badge from "./Badge.astro";
 import Experience from "./Experience.astro";
 import SectionContainer from "./SectionContainer.astro";
+import BadgesContainer from "./BadgesContainer.astro";
+
+const { t } = Astro.props;
 ---
 
 <main class="sm:mx-5">
-	<SectionContainer class="pt-44 pb-24">
+	<SectionContainer class="pt-44 pb-24 max-w-4xl px-4">
+		
 		<div class="pb-8">
 			<div class="flex flex-col sm:flex-row gap-4 items-center">
 				<Image
 					class="rounded-full"
-					src="/my-photo.jpg"
+					src='/images/profile.jpg'
 					alt="cristian"
 					width={120}
 					height={120}
@@ -26,19 +29,22 @@ import SectionContainer from "./SectionContainer.astro";
 			</div>
 		</div>
 		
-		<h2 class="text-2xl text-white/80 [&>strong]:text-[#aed1c4] [&>strong]:opacity-100">
+		<h2 class="text-2xl text-white/80 [&>strong]:text-[#aed1c4] [&>strong]:opacity-100 prose max-w-none">
 			Ingeniero de Software y Sistemas Informáticos. Especializado en <strong>Desarrollo de aplicaciones Web</strong> e <strong>Inteligencia Artificial</strong>. De Salamanca, España.
 		</h2>
 
-		<div class="flex flex-wrap gap-3 py-4 w-full">
-			<Badge url="https://www.linkedin.com/in/cristian-castillo-salguero/" bg_color="#162556" text_color="#fff" border_color="#1c398e">Linkedin</Badge>
-			<Badge url="https://github.com/CristianCSx" bg_color="#1e2939" text_color="#fff" border_color="#364153">Github</Badge>
-			<Badge url="https://x.com/cristiancsdev" bg_color="#101828" text_color="#fff" border_color="#28364a">X / Twitter</Badge>
-			<Badge url="mailto:cristiancsdev@gmail.com" bg_color="#424242" text_color="#fff" border_color="#5e5e5e">cristiancsdev@gmail.com</Badge>
-		</div>
+		<BadgesContainer />
+
 	</SectionContainer>
-	<SectionContainer id="experience">
-		<h2 class="text-2xl font-semibold mb-6">Experiencia laboral</h2>
+
+	<SectionContainer id="experience" class="pt-24 px-4">
+		<div class="flex flex-col mb-6">
+			<h2 class="text-2xl font-semibold mb-1">Experiencia</h2>
+			<div class="h-0.5 w-40 bg-linear-to-r from-[#6be9fa]/70 to-transparent"></div>
+		</div>
 		<Experience />
+	</SectionContainer>
+
+	<SectionContainer id="tech-stack" class="pt-24 pb-24 max-w-4xl px-4">tech-stack</SectionContainer>
 	</SectionContainer>
 </main>

@@ -7,25 +7,28 @@ import OpenAI from "./icons/OpenAI.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
 import SpringBoot from "./icons/SpringBoot.astro";
 import React from "./icons/React.astro";
+import MongoDB from "./icons/MongoDB.astro";
 
 const techStyles: Record<string, string> = {
-  'Django': "bg-[#44b78b] text-white",
-  'PostgreSQL': "bg-[#40668e] text-white",
-  'OpenAI': "bg-[#424242] text-white",
-  'React': "bg-[#75c2d9] text-white",
-  'Tailwind CSS': "bg-[#54b9f9] text-white",
-  'Astro': "bg-linear-to-r from-[#3e3c9e] to-[#6f37ab]",
-  'Spring Boot': "bg-[#7db150] text-white"
+	'Django': "bg-[#44b78b] text-white",
+	'PostgreSQL': "bg-[#40668e] text-white",
+	'OpenAI': "bg-[#424242] text-white",
+	'React': "bg-[#75dbfa] text-white",
+	'Tailwind CSS': "bg-[#54b9f9] text-white",
+	'Astro': "bg-linear-to-r from-[#3e3c9e] to-[#6f37ab]",
+	'Spring Boot': "bg-[#7db150] text-white",
+	'MongoDB': "bg-[#24313b] text-white"
 };
 
 const techIcons: Record<string, any> = {
-  'Django': Django,
-  'PostgreSQL': PostgreSQL,
-  'OpenAI': OpenAI,
-  'Astro': AstroIcon,
-  'Tailwind CSS': Tailwindcss,
-  'Spring Boot': SpringBoot,
-  'React': React
+	'Django': Django,
+	'PostgreSQL': PostgreSQL,
+	'OpenAI': OpenAI,
+	'Astro': AstroIcon,
+	'Tailwind CSS': Tailwindcss,
+	'Spring Boot': SpringBoot,
+	'React': React,
+	'MongoDB': MongoDB
 };
 
 const Icon = techIcons[technology];
@@ -34,7 +37,7 @@ const defaultStyle = "bg-gray-200 text-gray-800";
 const classes = techStyles[technology] || defaultStyle;
 ---
 
-<span class={`px-3 py-1 text-sm text-nowrap rounded-full flex flex-row items-center gap-x-2 font-light ${classes} h-8`}>
-  {Icon && <Icon />}
-  {technology}
+<span class={`px-3 py-1 text-sm text-nowrap rounded-full flex flex-row items-center gap-x-2 font-light ${classes} h-8 border border-white/20`}>
+	{Icon && <Icon />}
+	{technology}
 </span>
