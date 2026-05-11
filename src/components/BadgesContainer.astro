@@ -1,0 +1,11 @@
+---
+import Badge from "./Badge.astro";
+import badges from "@/data/badges.json";
+---
+<div class="flex flex-wrap gap-3 py-4 w-full">
+	{
+		badges.map(badge => (
+			<Badge {...badge} />
+		))
+	}
+</div>
