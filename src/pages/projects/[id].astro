@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SectionContainer from "../../components/SectionContainer.astro";
+import { getCollection, render } from "astro:content";
+import { Image } from "astro:assets";
+import TechnologiesContainer from "../../components/TechnologiesContainer.astro";
+
+
+export async function getStaticPaths () {
+	const projects = await getCollection("projects");
+
+	return projects.map((project) => ({
+		params: { id: project.id },
+		props: { project }
+	}));
+};
+
+const { project } = Astro.props;
+const { data, id } = project;
+const { title, technologies, image, description, link } = data;
+
+const { Content } = await render(project);
+---
+
+<Layout title={title}>
+	<SectionContainer class="mt-44 mb-24 max-w-4xl px-5 sm:px-10 md:px-20 lg:px-4">
+		<div class="">
+			<div class="flex flex-col">
+				<div class="">
+					<h1 transition:name={`title-${id}`} class="font-bold text-4xl mb-8">{title}</h1>
+				</div>
+				<Image 
+					src={`/images/${image}`}
+					transition:name={`img-${id}`}
+					alt={title}
+					width={860} 
+					height={460} 
+					loading="eager"
+					class="w-full h-auto rounded-xl opacity-90"
+				/>
+
+				<TechnologiesContainer transition:name={`techs-${id}`} className="mt-10" technologies={technologies} />
+
+				<div class="mt-10 prose dark:prose-invert max-w-none">
+					<Content />
+				</div>
+			</div>
+		</div>
+	</SectionContainer>
+</Layout>

@@ -14,7 +14,7 @@ const { url = "#", text, bg_color, text_color, border_color} = Astro.props;
 	href={url}
 	target="_blank" 
 	rel="noopener noreferrer" 
-	class="badge break-all inline-flex border items-center px-2 py-1 text-sm rounded font-semibold text-nowrap min-w-[60px] justify-center transition duration-200"
+	class="badge break-all inline-flex border items-center px-2 py-1 text-sm rounded-full font-semibold text-nowrap min-w-[60px] justify-center transition duration-200"
 	style={`--bg: #${bg_color}; --text:#${text_color}; --border:#${border_color}`}
 >
 	{text}
