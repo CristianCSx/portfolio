@@ -3,8 +3,10 @@ import { Image } from "astro:assets";
 import Experience from "./Experience.astro";
 import SectionContainer from "./SectionContainer.astro";
 import BadgesContainer from "./BadgesContainer.astro";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
-const { t } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <main class="sm:mx-5">
@@ -20,9 +22,9 @@ const { t } = Astro.props;
 					height={120}
 					loading={"eager"}
 				/>
-				<h1 class="text-white text-3xl sm:text-5xl font-bold flex flex-wrap gap-x-3 pb-4">Hola, soy
+				<h1 class="text-white text-3xl sm:text-5xl font-bold flex flex-wrap gap-x-3 pb-4">{t('hero.title02')}
 					<span class="bg-linear-to-r from-[#B81CE8] to-[#57C1CF] bg-clip-text text-transparent">
-						Cristian
+						{t('hero.title03')}
 					</span>
 					👋
 				</h1>
@@ -30,7 +32,7 @@ const { t } = Astro.props;
 		</div>
 		
 		<h2 class="text-2xl text-white/80 [&>strong]:text-[#aed1c4] [&>strong]:opacity-100 prose max-w-none">
-			Ingeniero de Software y Sistemas Informáticos. Especializado en <strong>Desarrollo de aplicaciones Web</strong> e <strong>Inteligencia Artificial</strong>. De Salamanca, España.
+			{t('hero.subtitle01')} <strong> {t('hero.subtitle02')} </strong> {t('hero.subtitle03')}  <strong> {t('hero.subtitle04')} </strong>{t('hero.subtitle05')}
 		</h2>
 
 		<BadgesContainer />

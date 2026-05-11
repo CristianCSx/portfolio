@@ -1,0 +1,22 @@
+---
+const path = Astro.url.pathname;
+
+const isEnglish = path.startsWith('/en');
+
+const newPath = isEnglish
+	? path.replace('/en', '') || '/'
+	: `/en${path}`;
+---
+
+<a
+	href={newPath}
+	class="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded px-4 py-2 bg-white/10 backdrop-blur-sm font-bold transition hover:scale-105"
+>
+	{isEnglish ? 'ES' : 'EN'}
+
+	{isEnglish ? (
+		<img src="/images/flags/es.svg" alt="ES" class="w-5 h-5" />
+	) : (
+		<img src="/images/flags/gb.svg" alt="EN" class="w-5 h-5" />
+	)}
+</a>
