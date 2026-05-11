@@ -1,0 +1,30 @@
+[
+	{
+		"url": "https://www.linkedin.com/in/cristian-castillo-salguero/",
+		"text": "LinkedIn",
+		"bg_color": "162556",
+		"text_color": "fff",
+		"border_color": "1c398e"
+	},
+	{
+		"url": "https://x.com/cristiancsdev",
+		"text": "X / Twitter",
+		"bg_color": "101828",
+		"text_color": "fff",
+		"border_color": "28364a"
+	},
+	{
+		"url": "https://github.com/CristianCSx",
+		"text": "Github",
+		"bg_color": "1e2939",
+		"text_color": "fff",
+		"border_color": "364153"
+	},
+	{
+		"url": "mailto:cristiancsdev@gmail.com",
+		"text": "cristiancsdev@gmail.com",
+		"bg_color": "424242",
+		"text_color": "fff",
+		"border_color": "5e5e5e"
+	}
+]
