@@ -1,6 +1,6 @@
 ---
 title: Portfolio
-technologies: ["Astro", "Tailwind CSS"]
+technologies: ["Astro", "Tailwind CSS", "Flowbite"]
 image: portfolio.png
 description: A portfolio built using Astro and Tailwind CSS with the aim of learning these technologies.
 link: https://practica-individual.vercel.app/

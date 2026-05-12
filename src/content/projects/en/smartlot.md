@@ -1,6 +1,6 @@
 ---
 title: Smartlot
-technologies: ["React", "Spring Boot", "MongoDB", "OpenStreetMap"]
+technologies: ["React", "Spring Boot", "MongoDB", "OpenStreetMap", "ElasticSearch"]
 image: smartlot.png
 description: Master's thesis whose main objective is to provide open-source software designed to alleviate and resolve the problems that arise in a city when looking for a parking spot.
 link: https://practica-individual.vercel.app/

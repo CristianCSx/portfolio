@@ -9,6 +9,8 @@ import SpringBoot from "./icons/SpringBoot.astro";
 import React from "./icons/React.astro";
 import MongoDB from "./icons/MongoDB.astro";
 import OpenStreetMap from "./icons/OpenStreetMap.astro";
+import ElasticSearch from "./icons/ElasticSearch.astro";
+import Flowbite from "./icons/Flowbite.astro";
 
 const techStyles: Record<string, string> = {
 	'Django': "bg-[#44b78b] text-white",
@@ -18,7 +20,9 @@ const techStyles: Record<string, string> = {
 	'Tailwind CSS': "bg-[#54b9f9] text-white",
 	'Astro': "bg-linear-to-r from-[#3e3c9e] to-[#6f37ab]",
 	'Spring Boot': "bg-[#7db150] text-white",
-	'MongoDB': "bg-[#24313b] text-white"
+	'MongoDB': "bg-[#24313b] text-white",
+	'ElasticSearch': 'bg-[#2c63d6] text-white',
+	'Flowbite': 'bg-white text-[#2d5cf3] '
 };
 
 const techIcons: Record<string, any> = {
@@ -30,7 +34,9 @@ const techIcons: Record<string, any> = {
 	'Spring Boot': SpringBoot,
 	'React': React,
 	'MongoDB': MongoDB,
-	'OpenStreetMap': OpenStreetMap
+	'OpenStreetMap': OpenStreetMap,
+	'ElasticSearch': ElasticSearch,
+	'Flowbite': Flowbite
 };
 
 const Icon = techIcons[technology];
