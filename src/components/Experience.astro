@@ -1,6 +1,14 @@
 ---
+import { getLangFromUrl } from '../i18n/utils';
 import ExperienceItem from "./ExperienceItem.astro";
-import experience from "@/data/experience.json";
+import experienceEs from "@/data/es/experience.json";
+import experienceEn from "@/data/en/experience.json";
+
+const lang = getLangFromUrl(Astro.url);
+
+let experience = experienceEs;
+if(lang === 'en') experience = experienceEn;
+
 ---
 
 <div class="w-full max-w-4xl mx-auto px-4">

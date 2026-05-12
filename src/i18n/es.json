@@ -1,5 +1,12 @@
 {
 	"title": "Portfolio de Cristian",
+	"nav": {
+		"button01": "Inicio",
+		"button02": "Experiencia",
+		"button03": "Teck Stack",
+		"button04": "Proyectos",
+		"button05": "Sobre mí"
+	},
 	"hero": {
 		"title02": "Hola, soy",
 		"title03": "Cristian",
@@ -7,7 +14,12 @@
 		"subtitle02": "Desarrollo de Aplicaciones web",
 		"subtitle03": "e",
 		"subtitle04": "Inteligencia Artificial",
-		"subtitle05": ". De Salamanca, España."
+		"subtitle05": ". De Salamanca, España.",
+		"text01": "Experiencia"
+	},
+	"footer": {
+		"text01": "Casi todos los derechos reservados.",
+		"text02": "Contacto"
 	}
 	
 }

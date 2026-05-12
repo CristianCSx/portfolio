@@ -9,7 +9,6 @@ export const languages = {
 export type Lang = keyof typeof languages;
 
 export function getLangFromUrl(url: URL): Lang {
-	// ✅ FIX: detección robusta por prefijo
 	return url.pathname.startsWith('/en') ? 'en' : 'es';
 }
 

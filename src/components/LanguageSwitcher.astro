@@ -3,10 +3,22 @@ const path = Astro.url.pathname;
 
 const isEnglish = path.startsWith('/en');
 
+let rest = path.replace(/^\/(en|es)/, '');
+
+if (!rest.startsWith('/')) {
+	rest = '/' + rest;
+}
+
+if (rest === '//') {
+	rest = '/';
+}
+
 const newPath = isEnglish
-	? path.replace('/en', '') || '/'
-	: `/en${path}`;
+	? `/es${rest === '/' ? '' : rest}`
+	: `/en${rest === '/' ? '' : rest}`;
 ---
+
+<a href={newPath}>
 
 <a
 	href={newPath}

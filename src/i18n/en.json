@@ -1,5 +1,12 @@
 {
 	"title": "Cristian's Portfolio",
+	"nav": {
+		"button01": "Home",
+		"button02": "Experience",
+		"button03": "Teck Stack",
+		"button04": "Projects",
+		"button05": "About me"
+	},
 	"hero":{
 		"title02": "Hi, I'm",
 		"title03": "Cristian",
@@ -7,6 +14,11 @@
 		"subtitle02": "Web applications development",
 		"subtitle03": "and",
 		"subtitle04": "Artificial Inteligence",
-		"subtitle05": ". From Salamanca, Spain."
-	}	
+		"subtitle05": ". From Salamanca, Spain.",
+		"text01": "Experience"
+	},
+	"footer": {
+		"text01": "Almost all rights reserved.",
+		"text02": "Contact"
+	}
 }

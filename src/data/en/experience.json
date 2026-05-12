@@ -1,0 +1,26 @@
+[
+	{
+		"title": "Computer Engineering Degree Student",
+		"location": "University of Salamanca (USAL)",
+		"location_url": "https://usal.es/",
+		"description": "I am a student in the Computer Engineering program at the University of Salamanca (USAL), where I have gained a strong foundation in computer systems, algorithm analysis, and web development, among many other areas."
+	},
+	{
+		"title": "Intern",
+		"location": "GRIAL Research Group",
+		"location_url": "https://grial.usal.es/",
+		"description": "Intern with the GRIAL Research Group at the University of Salamanca. During this internship, I gained knowledge of Large Language Models (LLMs) and expanded my expertise in web application development."
+	},
+	{
+		"title": "Student in the Master's Program in Software Engineering and Computer Systems",
+		"location": "International University of La Rioja (UNIR)",
+		"location_url": "https://www.unir.net/",
+		"description": "I am a student in the Master's program in Software Engineering at the International University of La Rioja (UNIR), where I expanded my knowledge in web application development, cybersecurity, software engineering, and project management, among other areas."
+	},
+	{
+	   "title": "Intern",
+	   "location": "Future International Trading S.L",
+	   "location_url": "https://future-trading.es/",
+	   "description": "Intern as a junior software engineer responsible for developing crowdfunding-oriented software (Financecrowd) for client companies and providing logistics support." 
+	}
+]

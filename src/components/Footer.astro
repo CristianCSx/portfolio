@@ -1,5 +1,10 @@
 ---
-const currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer class="mt-16 opacity-80 w-full max-w-4xl mx-auto rounded-base shadow-xs m-4 mb-10">
@@ -7,11 +12,11 @@ const currentYear = new Date().getFullYear()
 		<span class="text-sm text-center sm:text-left dark:text-zinc-200/90 sm:max-[950px]:pl-10">
 			&copy; {currentYear}
 			<a href="https://github.com/CristianCSx" class="hover:underline">CristianCSx</a> |
-			Casi todos los derechos reservados.
+			{t('footer.text01')}
 		</span>
 		<ul class="flex justify-center sm:justify-end text-sm font-medium text-white/90 sm:max-[950px]:pr-10">
 			<li>
-				<a href="mailto:cristiancsdev@gmail.com" class="hover:underline">Contacto</a>
+				<a href="mailto:cristiancsdev@gmail.com" class="hover:underline">{t('footer.text02')}</a>
 			</li>
 		</ul>
 	</div>

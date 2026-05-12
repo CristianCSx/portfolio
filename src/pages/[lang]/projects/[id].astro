@@ -1,23 +1,36 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import SectionContainer from "../../components/SectionContainer.astro";
+import Layout from "../../../layouts/Layout.astro";
+import SectionContainer from "../../../components/SectionContainer.astro";
 import { getCollection, render } from "astro:content";
 import { Image } from "astro:assets";
-import TechnologiesContainer from "../../components/TechnologiesContainer.astro";
-
+import TechnologiesContainer from "../../../components/TechnologiesContainer.astro";
 
 export async function getStaticPaths () {
-	const projects = await getCollection("projects");
+	const projectsEs = await getCollection("projectsEs");
+	const projectsEn = await getCollection("projectsEn");
 
-	return projects.map((project) => ({
-		params: { id: project.id },
-		props: { project }
-	}));
+	return [
+		...projectsEs.map(project => ({
+			params: {
+				lang: 'es',
+				id: project.id
+			},
+			props: { project }
+		})),
+
+		...projectsEn.map(project => ({
+			params: {
+				lang: 'en',
+				id: project.id
+			},
+			props: { project }
+		}))
+	];
 };
 
 const { project } = Astro.props;
 const { data, id } = project;
-const { title, technologies, image, description, link } = data;
+const { title, technologies, image } = data;
 
 const { Content } = await render(project);
 ---
