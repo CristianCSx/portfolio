@@ -9,7 +9,7 @@ const projectsEs = defineCollection({
 		technologies: z.array(z.string()),
 		image: z.string(),
 		description: z.string(),
-		link: z.url()
+		link: z.string()
 	}),
 });
 
@@ -20,7 +20,7 @@ const projectsEn = defineCollection({
 		technologies: z.array(z.string()),
 		image: z.string(),
 		description: z.string(),
-		link: z.url()
+		link: z.string()
 	}),
 });
 

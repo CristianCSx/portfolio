@@ -42,15 +42,17 @@ const { Content } = await render(project);
 				<div class="">
 					<h1 transition:name={`title-${id}`} class="font-bold text-4xl mb-8">{title}</h1>
 				</div>
-				<Image 
-					src={`/images/${image}`}
-					transition:name={`img-${id}`}
-					alt={title}
-					width={860} 
-					height={460} 
-					loading="eager"
-					class="w-full h-auto rounded-xl opacity-90"
-				/>
+				<div class="w-full aspect-video overflow-hidden rounded-xl">
+					<Image 
+						src={`/images/${image}`}
+						alt={title}
+						transition:name={`img-${id}`}
+						width={1920}
+						height={1080}
+						class="object-cover object-top-left w-full h-full"
+						loading="eager"
+					/>
+				</div>
 
 				<TechnologiesContainer transition:name={`techs-${id}`} className="mt-10" technologies={technologies} />
 
