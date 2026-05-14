@@ -1,32 +1,22 @@
-# Astro Starter Kit: Basics
+# 🚀 Portfolio personal con Astro
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+Bienvenido a mi portfolio personal construido con tecnologías modernas del ecosistema frontend. Este proyecto está diseñado para ser rápido, limpio y totalmente responsive.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## ✨ Stack tecnológico
 
-Inside of your Astro project, you'll see the following folders and files:
+Este proyecto está desarrollado con:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+- ⚡ **Astro** – Framework moderno para sitios estáticos ultra rápidos
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+- 🎨 **Tailwind CSS** – Utility-first CSS para estilos rápidos y consistentes
+
+- 📝 **@tailwindcss/typography** – Estilos optimizados para contenido textual
+
+- 🧩 **Flowbite** – Componentes UI reutilizables basados en Tailwind
+
+---
 
 ## 🧞 Commands
 
