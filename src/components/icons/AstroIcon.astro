@@ -1,5 +1,13 @@
+---
+interface Props {
+	class?: string
+}
+
+const { class: className } = Astro.props;
+---
+
 <svg
-class="size-5 mb-[-2px]"
+class={className}
  fill="none" viewBox="0 0 85 107">
   <path
     fill="#fff"
@@ -22,8 +30,8 @@ class="size-5 mb-[-2px]"
       y2="84.947"
       gradientUnits="userSpaceOnUse"
     >
-      <stop stop-color="#D83333" />
-      <stop offset="1" stop-color="#F041FF" />
+      <stop stop-color="#fff" />
+      <stop offset="1" stop-color="#fff" />
     </linearGradient>
   </defs>
 </svg>

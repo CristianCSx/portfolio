@@ -1,5 +1,13 @@
+---
+interface Props {
+	class?: string
+}
+
+const { class: className } = Astro.props;
+---
+
 <svg 
-  class="size-5"
+  class={className}
   preserveAspectRatio="xMidYMid" 
   viewBox="0 0 256 260"
 >
