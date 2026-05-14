@@ -1,11 +1,27 @@
 ---
 const path = Astro.url.pathname;
-const isEnglish = path.startsWith('/en');
-let rest = path.replace(/^\/(en|es)/, '');
 
-const newPath = isEnglish
-	? `/es${rest === '/' ? '' : rest}`
-	: `/en${rest === '/' ? '' : rest}`;
+const isEnglish = path.startsWith('/en');
+const isSpanish = path.startsWith('/es');
+
+// quitar prefijo de idioma
+let rest = path.replace(/^\/(en|es)/, '');
+if (!rest.startsWith('/')) rest = '/';
+
+// detectar raíz real (sin idioma)
+const isRoot = path === '/';
+
+// construir nuevo path
+let newPath;
+
+if (isRoot) {
+  newPath = '/en';
+} else if (isEnglish) {
+  newPath = rest === '/' ? '/' : `/es${rest}`;
+} else {
+  // español o raíz implícita
+  newPath = rest === '/' ? '/en' : `/en${rest}`;
+}
 ---
 
 <a
