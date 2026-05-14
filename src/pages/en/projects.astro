@@ -21,16 +21,14 @@ const projects = await getCollection("projectsEn");
 						return (
 							<div class="flex flex-col lg:flex-row lg:mb-20 mt-20 sm:mt-20 md:mt-10">
 								<div class="flex items-start lg:w-[450px] lg:min-w-[450px]">
-									<div class="relative overflow-hidden rounded-xl w-full">
+									<div class="relative w-full aspect-video overflow-hidden rounded-xl">
 										<a href={`/en/projects/${id}`}>
 											<Image 
-											src={`/images/${image}`}
-											transition:name={`img-${id}`}
-											alt={title}
-											width={450} 
-											height={250} 
-											loading="eager"
-											class="w-full h-auto object-contain rounded-xl transition-transform duration-500 hover:scale-110"
+												src={`/images/${image}`}
+												alt={title}
+												width={1920}
+												height={1080}
+												class="object-cover transition-transform duration-500 hover:scale-110"
 											/>
 										</a>
 									</div>
@@ -39,7 +37,7 @@ const projects = await getCollection("projectsEn");
 								<div class="flex flex-col flex-1 mt-5 mb-5 lg:mt-0 lg:ml-10 md:mb-5">
 									<div class="flex flex-col gap-y-2 font-extralight opacity-85">
 										<h1 transition:name={`title-${id}`} class="text-2xl font-bold">{title}</h1>
-										<TechnologiesContainer className="" transition:name={`techs-${id}`} technologies={technologies} />
+										<TechnologiesContainer className="mt-5 mb-5 sm:mt-2 sm:mb-2" transition:name={`techs-${id}`} technologies={technologies} />
 										<p class="text-justify prose max-w-none dark:prose-invert">{description}</p>
 									</div>
 								</div>

@@ -3,7 +3,7 @@ title: Smartlot
 technologies: ["React", "Spring Boot", "MongoDB", "OpenStreetMap", "ElasticSearch"]
 image: smartlot.png
 description: Proyecto de fin de máster cuyo objetivo principal es el de proporcionar un software Open Source que permita aliviar y solventar los problemas que surgen en una cuidad a la hora de buscar un aparcamiento.
-link: https://practica-individual.vercel.app/
+link: "#"
 ---
 
 Ruidos, atascos, contaminación foncalizada y otros inconvenientes son la consecuencia de la falta de un software que permita a los conductores poder ver en tiempo real la disponibildad de plazas libres en los aparcamientos de una cuidad.

@@ -16,11 +16,11 @@ const techStyles: Record<string, string> = {
 	'Django': "bg-[#44b78b] text-white",
 	'PostgreSQL': "bg-[#40668e] text-white",
 	'OpenAI': "bg-[#424242] text-white",
-	'React': "bg-[#75dbfa] text-white",
+	'React': "bg-[#54b0cc] text-white",
 	'Tailwind CSS': "bg-[#54b9f9] text-white",
-	'Astro': "bg-linear-to-r from-[#3e3c9e] to-[#6f37ab]",
+	'Astro': "bg-linear-to-r from-[#d83333] to-[#f041ff]",
 	'Spring Boot': "bg-[#7db150] text-white",
-	'MongoDB': "bg-[#24313b] text-white",
+	'MongoDB': "bg-[#63b869] text-white",
 	'ElasticSearch': 'bg-[#2c63d6] text-white',
 	'Flowbite': 'bg-white text-[#2d5cf3] '
 };
@@ -39,6 +39,20 @@ const techIcons: Record<string, any> = {
 	'Flowbite': Flowbite
 };
 
+const techIconsStyles: Record<string, string> = {
+	'Django': 'size-6 ml-[-6px] mr-[-8px]',
+	'PostgreSQL': 'size-5',
+	'OpenAI': 'size-5',
+	'Astro': 'size-5 mb-[-2px]',
+	'Tailwind CSS': 'size-6 ml-[-4px] mr-[-4px]',
+	'Spring Boot': 'size-5',
+	'React': 'size-5',
+	'MongoDB': 'size-5 ml-[-6px] mr-[-6px]',
+	'OpenStreetMap': 'size-5',
+	'ElasticSearch': 'size-5',
+	'Flowbite': 'size-5'
+};
+
 const Icon = techIcons[technology];
 
 const defaultStyle = "bg-gray-200 text-gray-800";
@@ -46,6 +60,6 @@ const classes = techStyles[technology] || defaultStyle;
 ---
 
 <span class={`px-3 py-1 text-sm text-nowrap rounded-full flex flex-row items-center gap-x-2 font-light ${classes} h-8`}>
-	{Icon && <Icon />}
+	{Icon && <Icon class={techIconsStyles[technology]} />}
 	{technology}
 </span>

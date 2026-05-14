@@ -1,0 +1,103 @@
+---
+import Java from "./icons/Java.astro";
+import Javascript from "./icons/Javascript.astro";
+import Tailwindcss from "@/components/icons/Tailwindcss.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import SpringBoot from "./icons/SpringBoot.astro";
+import React from "./icons/React.astro";
+import Git from "./icons/Git.astro";
+import Github from "./icons/Github.astro";
+import Python from "./icons/Python.astro";
+import MongoDB from "./icons/MongoDB.astro";
+import PostgreSQL from "./icons/PostgreSQL.astro";
+import Django from "./icons/Django.astro";
+
+const technologies = [
+	{
+		name: "Javascript",
+		icon: Javascript,
+		//text-[#f4e14f]
+		class: "size-15"
+	},
+	{
+		name: "Java",
+		icon: Java,
+		//text-[#e76f00]
+		class: "size-15"
+	},
+	{
+		name: "Python",
+		icon: Python,
+		class: "size-15"
+	},
+	{
+		name: "Astro",
+		icon: AstroIcon,
+		class: "size-15"
+	},
+	{
+		name: "React",
+		icon: React,
+		//text-[#6bb1c6]
+		class: "size-15"
+	},
+	{
+		name: "Spring Boot",
+		icon: SpringBoot,
+		//text-[#7db345]
+		class: "size-15"
+	},
+	{
+		name: "Django",
+		icon: Django,
+		class: "size-15"
+	},
+	{
+		name: "Tailwind CSS",
+		icon: Tailwindcss,
+		//text-[#54b9f9]
+		class: "size-15"
+	},
+	{
+		name: "Git",
+		icon: Git,
+		//text-[#DE4C36]
+		class: 'size-15'
+	},
+	{
+		name: "Github",
+		icon: Github,
+		class: 'size-15'
+	},
+	{
+		name: "MongoDB",
+		icon: MongoDB,
+		//text-[#00ED64]
+		class: "size-15"
+	},
+	{
+		name: "PostgreSQL",
+		icon: PostgreSQL,
+		class: "size-15"
+	}
+];
+---
+
+<main class="w-full">
+	<div class="flex flex-wrap justify-center gap-9">
+		{
+			technologies.map((tech) => {
+				const Icon = tech.icon;
+
+				return (
+					<div
+						class="size-[80px] flex items-center justify-center"
+						title={tech.name}
+					>
+						<Icon class={tech.class} />
+					</div>
+				);
+			})
+		}
+	</div>
+</main>

@@ -8,12 +8,11 @@ let route = '/es';
 if(lang === 'en') route =  '/' + lang;
 ---
 
-<header class="fixed z-10 flex justify-center items-center mt-4 px-4 py-3 lg:w-auto mx-auto bg-white/10 backdrop-blur-sm rounded-xl text-sm">
-	<nav class="flex flex-wrap justify-center gap-x-4 gap-y-2">
-		<a class="text-white/80 hover:text-white" href=`${route}/#top`>{t('nav.button01')}</a>
-		<a class="text-white/80 hover:text-white" href=`${route}/#experience`>{t('nav.button02')}</a>
-		<a class="text-white/80 hover:text-white" href=`${route}/#tech-stack`>{t('nav.button03')}</a>
-		<a class="text-white/80 hover:text-white" href=`${route}/projects`>{t('nav.button04')}</a>
-		<a class="text-white/80 hover:text-white" href="#about-me">{t('nav.button05')}</a>
+<header class="fixed z-10 flex justify-center items-center mt-4 lg:w-auto p-2 mx-auto bg-white/10 backdrop-blur-sm rounded-xl text-sm">
+	<nav class="flex flex-wrap justify-center">
+		<a class="rounded px-4 py-2 text-white/80 hover:text-white hover:bg-white/20" href=`${route}/#top`>{t('nav.button01')}</a>
+		<a class="rounded px-4 py-2 text-white/80 hover:text-white hover:bg-white/20" href=`${route}/#experience`>{t('nav.button02')}</a>
+		<a class="rounded px-4 py-2 text-white/80 hover:text-white hover:bg-white/20" href="#about-me">{t('nav.button05')}</a>
+		<a class="rounded px-4 py-2 text-white/80 hover:text-white hover:bg-white/20" href=`${route}/projects`>{t('nav.button04')}</a>
 	</nav>
 </header>

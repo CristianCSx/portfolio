@@ -3,7 +3,7 @@ title: Portfolio
 technologies: ["Astro", "Tailwind CSS", "Flowbite"]
 image: portfolio.png
 description: Portfolio desarrollado con Astro y Tailwind CSS con el fin de aprender dichas tencologías.
-link: https://practica-individual.vercel.app/
+link: "#"
 ---
 
 Este portfolio se ha desarrollado con el fin de poder aprender a desarrollar páginas web estáticas usando el framework de **Astro** y aplicar estilos de forma fácil gracias a la librería de **Tailwind CSS**.

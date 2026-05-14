@@ -3,7 +3,7 @@ title: D-ia-grams
 technologies: ["Django", "PostgreSQL", "OpenAI"]
 image: d-ia-grams.png
 description: Proyecto de fin de grado que facilita el aprendizaje de UML mediante un chat con IA de OpenAI capaz de generar ejercicios y sus soluciones en forma de diagramas de clase.
-link: https://practica-individual.vercel.app/
+link: "#"
 ---
 
 D-ia-grams es un proyecto desarrollado como trabajo de fin de grado el cual tiene como objetivo apoyar, facilitar y ayudar en el aprendizaje del lenguaje UML.

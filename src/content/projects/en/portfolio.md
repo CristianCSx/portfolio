@@ -3,7 +3,7 @@ title: Portfolio
 technologies: ["Astro", "Tailwind CSS", "Flowbite"]
 image: portfolio.png
 description: A portfolio built using Astro and Tailwind CSS with the aim of learning these technologies.
-link: https://practica-individual.vercel.app/
+link: "#"
 ---
 
 This portfolio was created to help me learn how to build static websites using the **Astro** framework and apply styles easily with the **Tailwind CSS** library.
